@@ -1,0 +1,33 @@
+def cesar_encrypt(message, key):
+    encrypted_message = ""
+    for char in message:
+        
+        if char.isalpha():
+            
+            offset = 65 if char.isupper() else 97
+            
+            encrypted_char = chr((ord(char) + key - offset) % 26 + offset)
+            encrypted_message += encrypted_char
+        else:
+            
+            encrypted_message += char
+    return encrypted_message
+
+def cesar_decrypt(encrypted_message, key):
+    decrypted_message = ""
+    for char in encrypted_message:
+        if char.isalpha():
+            offset = 65 if char.isupper() else 97
+            decrypted_char = chr((ord(char) - key - offset) % 26 + offset)
+            decrypted_message += decrypted_char
+        else:
+            decrypted_message += char
+    return decrypted_message
+
+
+
+encrypted_message = cesar_encrypt(message, key)
+print("Message chiffré :", encrypted_message)
+
+decrypted_message = cesar_decrypt(encrypted_message, key)
+print("Message déchiffré :", decrypted_message)
