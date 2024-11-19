@@ -12,7 +12,7 @@ def chiffrement_cesar(texte, decalage):
     return resultat
 
 texte = "il n'y a pas de soleil aujourd'hui"
-decalage = 457
+decalage = 467
 texte_crypte = chiffrement_cesar(texte, decalage)
 
 print("Texte original : ", texte)
