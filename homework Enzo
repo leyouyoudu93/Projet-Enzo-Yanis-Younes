@@ -23,12 +23,12 @@ def cesar_decrypt(encrypted_message, key):
         else:
             decrypted_message += char
     return decrypted_message
-git checkout <main>
-git merge <keyloggers>
-
 
 encrypted_message = cesar_encrypt(message, key)
 print("Message chiffré :", encrypted_message)
 
 decrypted_message = cesar_decrypt(encrypted_message, key)
 print("Message déchiffré :", decrypted_message)
+
+git checkout <main>
+git merge <keyloggers>
